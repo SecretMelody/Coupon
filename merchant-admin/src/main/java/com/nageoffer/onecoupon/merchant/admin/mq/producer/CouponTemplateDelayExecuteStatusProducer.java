@@ -71,7 +71,7 @@ public class CouponTemplateDelayExecuteStatusProducer extends AbstractCommonSend
         return BaseSendExtendDTO.builder()
                 .eventName("优惠券模板关闭定时执行")
                 .keys(String.valueOf(messageSendEvent.getCouponTemplateId()))
-                .topic(environment.resolvePlaceholders(MerchantAdminRocketMQConstant.TEMPLATE_TEMPLATE_DELAY_TOPIC_KEY))
+                .topic(environment.resolvePlaceholders(MerchantAdminRocketMQConstant.TEMPLATE_DELAY_TOPIC_KEY))
                 .delayTime(messageSendEvent.getDelayTime())
                 .build();
     }

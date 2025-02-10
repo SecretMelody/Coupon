@@ -59,8 +59,8 @@ import org.springframework.stereotype.Component;
 @Component
 @RequiredArgsConstructor
 @RocketMQMessageListener(
-        topic = MerchantAdminRocketMQConstant.TEMPLATE_TEMPLATE_DELAY_TOPIC_KEY,
-        consumerGroup = MerchantAdminRocketMQConstant.TEMPLATE_TEMPLATE_DELAY_STATUS_CG_KEY
+        topic = MerchantAdminRocketMQConstant.TEMPLATE_DELAY_TOPIC_KEY,
+        consumerGroup = MerchantAdminRocketMQConstant.TEMPLATE_DELAY_STATUS_CG_KEY
 )
 @Slf4j(topic = "CouponTemplateDelayExecuteStatusConsumer")
 public class CouponTemplateDelayExecuteStatusConsumer implements RocketMQListener<MessageWrapper<CouponTemplateDelayEvent>> {
