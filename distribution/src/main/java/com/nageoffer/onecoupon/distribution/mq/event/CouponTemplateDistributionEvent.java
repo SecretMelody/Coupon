@@ -39,6 +39,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Date;
+
 /**
  * 优惠券模板任务执行事件
  * <p>
@@ -76,6 +78,11 @@ public class CouponTemplateDistributionEvent {
      * 优惠券模板id
      */
     private Long couponTemplateId;
+
+    /**
+     * 有效期结束时间
+     */
+    private Date validEndTime;
 
     /**
      * 消耗规则
